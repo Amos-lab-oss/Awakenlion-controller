@@ -23,15 +23,16 @@
 \usepackage[intoc]{nomencl}
 \usepackage{booktabs}
 \usepackage{subcaption}
+\usepackage{xcolor} % 支持颜色
 
 
 %\newcommand{\myfront}{\textbf{\texfsf{Fancy Text}}}
 
-
+\pagenumbering{arabic} % 阿拉伯数字（默认）
 \title{Awakenlion controller}
 \author{林梓聪}
 \date{\today}
-\pagestyle{empty}
+\pagestyle{plain}
 
 
 
@@ -63,6 +64,24 @@
 \linespread{1.35}
 \setstretch{1.523}
 
+\definecolor{keil-bg}{RGB}{255, 255, 255}
+\definecolor{keil-text}{RGB}{0, 0, 0}
+\definecolor{keil-keyword}{RGB}{86, 156, 214}
+\definecolor{keil-comment}{RGB}{87, 166, 74}
+\definecolor{keil-string}{RGB}{214, 157, 133}
+\lstset{
+    backgroundcolor=\color{keil-bg},      % 背景色
+    basicstyle=\ttfamily\color{keil-text},% 基本字体样式
+    keywordstyle=\color{keil-keyword},    % 关键词颜色
+    commentstyle=\it\color{keil-comment}, % 注释颜色
+    stringstyle=\color{keil-string},      % 字符串颜色
+    % numbers=right,                      % 行号在右侧
+    numberstyle=\tiny\color{gray},        % 行号样式
+    tabsize=4,                             % 制表符宽 
+    literate= {\\}{{\textbackslash}}1   % 自动转义       
+              {_}{\_}1,                 % 下划线        
+      language=C
+}
   \maketitle
 
   % \begin{titlebox}{什么是系统？}
@@ -838,6 +857,18 @@
        \begin{flushleft}
         我们需要在云台代码中加入以下的代码
        \end{flushleft}
+      %  \begin{lstlisting}
+      %   float Sweep(debug_wave_t *Debug_wave)
+      %   {
+      %     static u32 i_fre = 0;
+      %     float w,speed_ref,omg;
+      %     uint32_t N;
+      %       if(Sweep_type == Sine)
+      %       {
+      %         \\ TIM_FRE 为函数执行频率,等效于采样频率 
+      %          omg tbackslash 数字角频率 
+      %   }= sweep_fre_sine[i_fre]*_2pi;\tex
+      % \end{lstlisting}
       \par \includegraphics[width=12cm]{picture/sweep_1.png}
       \par \includegraphics[width=12cm]{picture/sweep_2.png}
       \begin{flushleft}
@@ -987,7 +1018,7 @@
         我们先只让$K_p=5$，$K_i=0$、$K_d=0$，可得到伯德图如下:
         \par \includegraphics[width=12cm]{picture/C_5.png}\\
         观察伯德图我们可以看到$C(s)=5$，将系统的伯德图整体拉高了，使得稳态误差减少了。\\
-        但是我们看到他的抗噪声能力下降了，对比原系统的伯德图，假如输入信号都有一个100Hz的噪声,原系统可以抑制到-20多dB,但是加了只有比例项的PID后只能抑制到-10dB。这个和$C(s)=5$的伯德图本身就有关系（关于伯德图的叠加关系记得看上面dr.can的视频）。所以一旦有这个频段的噪音，系统就会剧烈抖动。\\{\scriptsize 不要问为什么不用考虑低频的噪声，因为噪声普遍都是高频的}
+        但是我们看到他的抗噪声能力下降了，对比原系统的伯德图，假如输入信号都有一个100Hz的噪声,原系统可以抑制到-20多dB,但是加了只有比例项的PID后只能抑制到-10dB。这个和$C(s)=5$的伯德图本身就有关系（关于伯德图的叠加关系记得看上面dr.can的视频）。所以一旦有这个频段的噪音，系统就会剧烈抖动。\\{\scriptsize 为什么不用考虑低频的噪声，因为噪声普遍是高频的}
       \end{flushleft}
       \vspace{2cm}
       \begin{flushleft}
@@ -1037,23 +1068,23 @@
       \subsubsection{代码实现}
         就用我们上面仿真出来的速度闭环函数：
         \begin{align*}
-          G(s)=\dfrac{32.36}{s-33.96}
+          G(s)=\dfrac{32.36}{s+33.96}
         \end{align*}
         所以内环的传递函数为
         \begin{align*}
-          G_1(s)*\dfrac{1}{s}=\dfrac{32.36}{s^2-33.96s}
+          G_1(s)*\dfrac{1}{s}=\dfrac{32.36}{s^2+33.96s}
         \end{align*}
         
         然后就得到前馈控制的函数： 
         \begin{align*}
-           G_f(s)=\dfrac{1}{G_1(s)}=\dfrac{s^2-33.96s}{32.36}
+           G_f(s)=\dfrac{1}{G_1(s)}=\dfrac{s^2+33.96s}{32.36}
         \end{align*}
         然后根据脉冲不变法就可以得到差分方程了，转换为C语言方程。\\
         \par \includegraphics[width=10cm]{picture/FFC_function.png} \\
 
         下面我给大家推导一下代码中的差分方程怎么来的，这里涉及一些离散信号的知识暂时不懂也没关系，后面有可能就会用到。
         \begin{align*}
-          G_f(s)&=\dfrac{s^2-33.96s}{32.36}\\
+          G_f(s)&=\dfrac{s^2+33.96s}{32.36}\\
                 &=\dfrac{1}{32.36}s^2+\dfrac{33.96}{32.36}s\\
             g_f(t)&=\mathcal{L}^{-1}{[G_f(s)]}=\dfrac{1}{32.36}\delta''\left( t \right)  + \dfrac{33.96}{32.36} \delta '\left( t \right)\\
             &\text{将信号离散化，$t=nT_s$，$T_s$为采样时间}\\
@@ -1074,8 +1105,89 @@
         \begin{flushleft}
           在我们的代码里面我们的“angle\_ref”的单位是度，而我们建模的单位是弧度(rad)，所以我们需要进行角度的转换才能代入函数，而且由于电机的物理特性限制我们最大的角速度是$\pm 30$，所以我们需要进行一个限幅（这些都可以通过查手册、计算知道的）
         \end{flushleft}
+        \subsection{阻力扭矩补偿}
+          \subsubsection{理论知识}
+          \begin{titlebox}{怎么理解阻力扭矩补偿}
+            首先，我们需要先知道我们为什么需要阻力扭矩补偿？\\
+            考虑到物理现实的原因，我们云台转轴相关连接件之间是有摩擦阻力的这是无法避免的。
+            所以，我们电机时间的云台转角和输入力矩之间的真实关系并不是如上面的模型所说的那样理想，其真实的物理模型应当如下：
+            \begin{align*}
+              J\overset{..}{\theta}+b\overset{.}{\theta}+N=T
+           \end{align*}
+           其中，b为粘滞摩擦系数（可以简单的理解为和我们上面说的阻尼系数是一样的），N为动摩擦或静摩擦力矩（即阻力扭矩）
+           \\这里我们可以看到，由于静摩擦或动摩擦力矩的出现，模型引入了非线性量$N$,通过我们前面的PID的学习我们可以知道，PID对非线性时不变系统的处理是比较差的。
+           
+           \begin{flushleft}
+              为什么对非线性的处理会比较差呢？在这里我略加解释一下，有利于大家理解,以我们控制的电机为例:
+              \\\textbf{对于比例项P来说,}非线性会导致增益 $K_p$的有效性变化
+            \begin{itemize} 
+              \item 在低速时，静摩擦占主导，需要更大的$K_p$才能克服。
+              \item 而在高速时，动摩擦$+$粘滞摩擦占主导， $K_p$需求降低。
+            \end{itemize}
+           \end{flushleft}
+          \begin{flushleft}
+            在控制系统调试过程中，由于参数整定的局限性，$K_p$的可调范围受到约束。具体表现为：在低速工况下整定的$K_p$ 值，若直接应用于高速工况，可能导致系统失稳甚至发散（如出现显著的超调或振荡）。这一现象凸显了系统动态响应（如快速性）与稳定性（如超调抑制）之间的固有矛盾，本质上是由于系统在不同工作点下的动态特性（如带宽、相位裕度）随工况变化而导致的鲁棒性不足问题。
+          \end{flushleft}
+           \begin{flushleft}
+            \textbf{对于积分项I来说，}非线性会导致积分饱和（Integral Windup）或稳态误差波动。
+            \begin{itemize} 
+              \item 齿槽效应导致扭矩周期性波动$\rightarrow$ 积分器持续累积误差，引发振荡。
+              \item 静摩擦导致“死区”，积分器需要更长时间补偿。
+            \end{itemize}
+           \end{flushleft}
+           \begin{flushleft}
+            {\scriptsize 下面我会结合传递函数的知识给大家讲解一下，有助于大家理解，如果还看不懂的话那就记住上面的结论吧。\\
+            先将上面的微分方程进行拉普拉斯变换，得到：
+            \begin{align*}
+              &Js^2\varTheta \left( s \right) +bs\varTheta \left( s \right) +\dfrac{N}{s}=T\left( s \right) \\
+              \Rightarrow&\varTheta \left( s \right) =\dfrac{T\left( s \right)}{Js^2+bs}-\dfrac{N}{s\left( Js^2+bs \right)}\\
+            \end{align*} 
+            前面一项是我们理想的系统，后面一项是非线性项（扰动项）。而这个非线性项就是我们需要补偿的阻力扭矩。\\
+            }
+           \end{flushleft}
+           \begin{flushleft}
+            这个阻力扭矩在我们小陀螺的时候会尤其明显，在和算法联调的时候可以发现我们离目标会有一个稳定的偏角，所以我们需要对阻力扭矩进行补偿，来消除非线性项对系统的影响，即消除动摩擦或者静摩擦的影响。至于为什么不用积分，我相信我上面已经说清楚了。
+            \\说白了其实这个也是一种前馈控制器，是我们对已知的量进行补偿，这个请参考我上面让大家看的前馈控制三种形式。
+           \end{flushleft}
+           
+           
+          \end{titlebox}
+          这里可参考中科大的\href {https://www.bilibili.com/video/BV1xJo4YPEuS?spm_id_from=333.788.videopod.sectionsvd_source=b02f21f21dd17ebeef8dac9338c9d06c}{阻力扭矩补偿}的视频
+          \subsubsection{代码实现}
+          \begin{flushleft}
+            首先我们应该怎么获取这个阻力扭矩呢？我们可以通过实验的方法来获取该值，我们让云台的yaw轴缓慢匀速的转动，缓慢的目的是忽略粘滞摩擦力的影响，而匀速的目的是让云台的动力和阻力二力平衡从而间接获得阻力扭矩。\\
+            
+          \end{flushleft}
+          \begin{flushleft}
+            OK，理论成立，我们就要知道怎么去实现。\\
+            我们可以通过vofa+来采样匀速转动的电流值，为什么是电流值呢？因为电流值和力矩是成正比的，电流越大，力矩越大。至于怎么让他匀速转动，我相信能看懂这个文档的学弟学妹应该不需要我教了，这里我就不赘述了。\\
+            \textit{这里需要注意一下，对于6020来说有两种控制电机的方式：电流控制和电压控制。如果是电压控制的话，这个补偿的效果不会很好，因为电压和力矩不是线性关系。6020如果是电压控制的话就刷一下固件，如果是4310的达秒电机则无所谓，因为4310只有电流控制}
+          \end{flushleft} 
+          
+        \begin{flushleft}
+          以哨兵的云台为例，哨兵云台的yaw轴是4310的达秒电机，我们让他以转速为1.4rad/s进行旋转。然后，对其电机的电流进行采样。得到如下图所示的波形。（提醒一下采样前记得把底盘注释掉）
+           \par \includegraphics[width=12cm]{picture/yaw_current_compensation.png}\\
+             {\scriptsize 这里可以看到我们的电流曲线并不是一条完美的直线，首先就是因为我们电机的电流采样是有噪声的，其次就是因为我们电机的转速并不是一个完美的匀速转动，我们需要进过PID的闭环运算，所以无法达到绝对的匀速，所以我们得到的曲线并不是一条完美的直线。
+            }
+        \end{flushleft}
         
+        \begin{flushleft}
+          我们只需要取它的平均值，这个平均值可以不用太准确，对于现在的波形图来说，他的平均值就是1050左右
+        \end{flushleft}
+          所以我们可以得到一个低配版的转速和阻力扭矩的关系（要时刻记住直流无刷电机电流和力矩是成正比的）,这个函数图是一个非常理想的图，它忽略了静摩擦的影响，直接简化为一个阶跃函数，对于电压控制的电机可以这样粗糙的给补偿：
+          \par \includegraphics[width=12cm]{picture/yaw_compensation.png}
+        \begin{flushleft}
+         但是在这个低配版的阻力扭矩补偿中，假如我们的值处于零点附近的话，那么就可能出现零点震荡的现象，这是因为倘若转速在零点附近波动时，我们会发现电流值会在1050和-1050之间来回波动，这个时候电机就会容易抽搐，所以我们需要对这个函数进行一个平滑处理，才能得到一个比较理想的函数图。\\
+         至于如何处理：我们可以将零点附近的一小段区间用正比例函数贴合过去，称之为“一阶连续化”。
+         \par \includegraphics[width=12cm]{picture/linearization_yaw.png}\\
+         按照上面的函数图我们就可以写出以下的代码，实现这个函数的功能。\\
+         \par \includegraphics[width=12cm]{picture/yaw_compensation_code.png}\\
         
+        \end{flushleft}
+        \subsection{重力补偿}
+
+        \subsection{低通滤波器}
+      
         \subsection{跟踪微分器}
         \begin{flushleft}
           为什么我会讲解这个控制器呢？因为在我之前使用键鼠调车的时候发现我鼠标输入的值变成了阶跃信号，而非一条平滑的曲线，这导致了我的云台一卡一卡的。后面有师兄帮我加了这个控制器之后曲线就变得平滑了。
@@ -1163,7 +1275,6 @@
                 这也是我们不用一阶系统的原因，虽然一阶系统一定程度上也可以平滑信号。但是他不存在我们上面所说的对系统靠近目标值的调节。同时我们的跟踪微分器还有一定的滤波作用，这个就让大家matlab自己动手仿真一下了，用matlab看看不同r值的伯德图的样子。
 
               \end{flushleft}
-
               \end{flushleft}
               
 
@@ -1185,7 +1296,7 @@
 
 
             \begin{flushleft}
-              若有错误的地方可以及时跟作者说。出门右转还有一些关于matlab的代码笔记方便大家使用。后面其实还有重力补偿、滤波器、卡尔曼滤波器等知识点因为用的少就没有提及到，有机会的话我还会进行补充，没有机会的话就留给学弟学妹们补充了。
+              若有错误的地方可以在github上联系作者和作者讨论。出门右转还有一些关于matlab的代码笔记方便大家使用。后面其实还有重力补偿、滤波器、卡尔曼滤波器等知识点因为用的少就没有提及到，有机会的话我还会进行补充，没有机会的话就留给学弟学妹们补充了。
             \end{flushleft}
         \begin{flushright}
           2025.2.18\\

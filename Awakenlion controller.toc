@@ -29,6 +29,11 @@
 \contentsline {subsection}{\numberline {3.3}前馈控制器}{45}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}理论知识}{45}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}代码实现}{46}{subsubsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.4}跟踪微分器}{49}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.4}阻力扭矩补偿}{49}{subsection.3.4}%
 \contentsline {subsubsection}{\numberline {3.4.1}理论知识}{49}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}代码实现}{55}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.2}代码实现}{51}{subsubsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.5}重力补偿}{54}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}低通滤波器}{54}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}跟踪微分器}{54}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}理论知识}{55}{subsubsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.2}代码实现}{60}{subsubsection.3.7.2}%
