@@ -906,7 +906,8 @@
     
 
     \href{https://bbs.robomaster.com/wiki/4574/3559}{RM官方开源教程-系统辨识基础教程}
-    \\\href{ https://blog.csdn.net/xiaohejiaoyiya/article/details/105958551?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522d515a96088d8f99093ec8d0b4cb80d62%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=d515a96088d8f99093ec8d0b4cb80d62&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-1-105958551-null-null.142^v100^pc_search_result_base1&utm_term=%E5%88%A9%E7%94%A8system%20identification%E7%A1%AE%E8%AE%A4%E6%A8%A1%E5%9E%8B&spm=1018.2226.3001.4187}{【Matlab】利用System identification App辨识对象模型}。
+    \\\href{ https://blog.csdn.net/xiaohejiaoyiya/article/details/105958551?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522d515a96088d8f99093ec8d0b4cb80d62%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=d515a96088d8f99093ec8d0b4cb80d62&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-1-105958551-null-null.142^v100^pc_search_result_base1&utm_term=%E5%88%A9%E7%94%A8system%20identification%E7%A1%AE%E8%AE%A4%E6%A8%A1%E5%9E%8B&spm=1018.2226.3001.4187}{【Matlab】利用System identification App辨识对象模型}。\\
+     \href{https://www.bilibili.com/video/BV1wX7BzVEf6/?spm_id_from=333.1391.0.0&vd_source=b02f21f21dd17ebeef8dac9338c9d06c}{云台参数识别与调试}    
     \subsubsection{知识补充}
     \begin{flushleft}
       大家按照我的步骤做完之后肯定会有很多疑惑，首先为什么用一阶系统，为什么我们仿真要用速度环，而不直接仿真系统的传递函数呢。
@@ -1066,6 +1067,7 @@
 
       \end{titlebox}
       \subsubsection{代码实现}
+       \textbf{① 速度环的前馈控制}\\
         就用我们上面仿真出来的速度闭环函数：
         \begin{align*}
           G(s)=\dfrac{32.36}{s+33.96}
@@ -1105,6 +1107,10 @@
         \begin{flushleft}
           在我们的代码里面我们的“angle\_ref”的单位是度，而我们建模的单位是弧度(rad)，所以我们需要进行角度的转换才能代入函数，而且由于电机的物理特性限制我们最大的角速度是$\pm 30$，所以我们需要进行一个限幅（这些都可以通过查手册、计算知道的）
         \end{flushleft}
+        \textbf{② 电流环的前馈控制}\\
+        上面我们学习了速度环的前馈控制，接下来我们学习一下电流环的前馈控制。至于为什么我们学习了速度环的控制还要再学电流环的控制呢？虽然在普通模式下用速度前馈的是非常流畅且静态误差很少，但是在进入自瞄的情况下云台会出现非常严重的超调现象。这是因为算法发给我们的自瞄值是一个突变的值，而且还带有比较严重的噪声信号，所以导致云台在自瞄的时候会出现非常大的超调现象。\\
+        而电流前馈控制可以有效的解决这样状况，因为电流前馈是直接作用于电压指令（PWM调制前），补偿电气的 L/R 时间常数（通常微秒级）。电流环带宽可提升至1kHz~10kHz，适合高频扰动抑制。再加上电流前馈对于PID参数的敏感度更低
+
         \subsection{阻力扭矩补偿}
           \subsubsection{理论知识}
           \begin{titlebox}{怎么理解阻力扭矩补偿}
@@ -1147,7 +1153,7 @@
            \end{flushleft}
            \begin{flushleft}
             这个阻力扭矩在我们小陀螺的时候会尤其明显，在和算法联调的时候可以发现我们离目标会有一个稳定的偏角，所以我们需要对阻力扭矩进行补偿，来消除非线性项对系统的影响，即消除动摩擦或者静摩擦的影响。至于为什么不用积分，我相信我上面已经说清楚了。
-            \\说白了其实这个也是一种前馈控制器，是我们对已知的量进行补偿，这个请参考我上面让大家看的前馈控制三种形式。
+            \\说白了其实这个阻力扭矩补偿也是一种前馈控制器，是我们对已知的量进行补偿，这个请参考我上面让大家看的前馈控制三种形式。
            \end{flushleft}
            
            
@@ -1180,13 +1186,50 @@
          但是在这个低配版的阻力扭矩补偿中，假如我们的值处于零点附近的话，那么就可能出现零点震荡的现象，这是因为倘若转速在零点附近波动时，我们会发现电流值会在1050和-1050之间来回波动，这个时候电机就会容易抽搐，所以我们需要对这个函数进行一个平滑处理，才能得到一个比较理想的函数图。\\
          至于如何处理：我们可以将零点附近的一小段区间用正比例函数贴合过去，称之为“一阶连续化”。
          \par \includegraphics[width=12cm]{picture/linearization_yaw.png}\\
-         按照上面的函数图我们就可以写出以下的代码，实现这个函数的功能。\\
+         按照上面的函数图我们就可以写出以下的代码，实现这个函数的功能。（注意这是电流补偿，所以是直接加到你要发送的电流上）\\
          \par \includegraphics[width=12cm]{picture/yaw_compensation_code.png}\\
-        
         \end{flushleft}
-        \subsection{重力补偿}
+       
+        \subsection{参考输入微分的前馈补偿}
+        \subsubsection{理论知识}
+        \begin{titlebox}{什么是参考输入微分的前馈补偿}
+          {
+             \hspace{1cm} 大家有可能会在代码中看到这个函数float getFeedforwardControl，也有可能已经被删了，但是不管怎么样我这里也顺便说一下。但是我们一般不使用这个前馈方式，所以我也就稍微讲一下理论知识，也把前馈的最后一种形式说一下，让文档更完整一点  \\ 
+            \hspace{1cm}  参考输入微分的前馈补偿是指在控制系统中，直接对参考输入信号进行微分处理，以便更好地预测和补偿系统的动态响应。其主要目的是通过提前计算出系统对参考输入的响应，从而提高系统的跟踪性能和响应速度。\\
+            我们从最开始的微分方程开始推导：\\
+            \begin{align*}
+              J\overset{..}{\theta}+b\overset{.}{\theta}=T
+           \end{align*}
+            将其差分离散，让我们可以用代码来实现：
+          \begin{align*}
+              &J\left(\dfrac{\theta(n+1)-2\theta(n)+\theta(n-1)}{T_s^2}\right)+b\left(\dfrac{\theta(n+1)-\theta(n)}{T_s}\right)=T(n) \\
+              \Rightarrow&\dfrac{J}{T_s^2}[\theta(n+1)-2\theta(n)+\theta(n-1)]+\dfrac{b}{T_s}[\theta(n+1)-\theta(n)]=T(n)
+            \end{align*} 
 
+            其实上面可以理解为，在知道精确的系统的微分方程时，用几个输入的离散点来对输出进行一个短时预测。\\
+            假如我们需要将在位置环中加入前馈，就需要用第一项来进行补偿，如果在速度环中加入前馈则需要用到第二项进行补偿\\
+          
+            但是这个控制器的实现我们需要考虑两个问题：\\①我们的转动惯量J和阻尼系数b并没有办法知道，即使云台的转动惯量可以问机械拿到（其实SolidWorks也并不准确，但是只是作为一个前馈控制器的参数也勉强可以用），但是阻尼系数b是无法知道的。这时可能会有读者问为什么不可以用上面的仿真出来的系统函数来反推转动惯量和阻尼系数呢？这个就关乎于我们的第二个问题了。\\
+            ②我们曾经说过，我们可以简单的将的电机输出力矩可以看做与输出电流成正比的关系，即$T=K_tI$，其中$K_t$为电机的力矩常数。我们的输入和输出都是电流值，所以说我们仿真出来的系统函数与实际的系统函数其实是还差一个$K_t$值即：\\
+            \begin{align*}
+            & JsW(s)+bW(s)= K_tI(s)\\
+           \Rightarrow&G(s)=\dfrac{K_t}{Js+b}
+            \end{align*} 
+            这个$K_t$值我们暂时没有办法得出来，即使得出来了最后的效果也不一定好，因为我们只是理想的认为力矩电流和力矩是成正比的，其实其中还有非线性因素存在。\\
+
+            \textit{以上的问题基于我现在水平和能力暂时没有办法解决，由于无法实操其理论知识依然停留在表层，有兴趣的学弟学妹可以尝试去解决一下，或者有更好的方法也可以告诉我，我会在文档中进行更新。}\\
+          }
+
+        \end{titlebox}
+        \begin{notitlebox}
+        \textit{讲到这里我小小的提一嘴，其实前馈的三种形式我们已经全部学完了，并且能很好的融入到我们的代码之中，还有不理解的可以再次参考一下我上面推荐的前馈控制的三种形式的视频再回头看看文档，希望大家有更深刻的理解。}          
+        \end{notitlebox}
+        \subsection{重力补偿}
+      
+      
         \subsection{低通滤波器}
+      
+      
       
         \subsection{跟踪微分器}
         \begin{flushleft}
@@ -1296,7 +1339,7 @@
 
 
             \begin{flushleft}
-              若有错误的地方可以在github上联系作者和作者讨论。出门右转还有一些关于matlab的代码笔记方便大家使用。后面其实还有重力补偿、滤波器、卡尔曼滤波器等知识点因为用的少就没有提及到，有机会的话我还会进行补充，没有机会的话就留给学弟学妹们补充了。
+              若有错误的地方可以在github上联系作者和作者讨论。或者说是发QQ邮箱到\textbf{3103942481@qq.com},或谷歌邮箱\textbf{Amos.lab.oss@gmail.com}。出门右转还有一些关于matlab的代码笔记方便大家使用。后面其实还有重力补偿、滤波器、卡尔曼滤波器等知识点因为用的少就没有提及到，有机会的话我还会进行补充，没有机会的话就留给学弟学妹们补充了。
             \end{flushleft}
         \begin{flushright}
           2025.2.18\\

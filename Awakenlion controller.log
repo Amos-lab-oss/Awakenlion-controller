@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.10)  22 MAY 2025 21:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.10)  18 JUN 2025 23:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1043,84 +1043,84 @@ File: ctex-zhmap-windows.tex 2022/07/14 v2.5.10 Windows font map loader for pdfT
 \tf@toc=\write5
 \openout5 = `"Awakenlion controller.toc"'.
 
- [2]
+ [2] [3]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 136.
  (d:/latex/texlive/2024/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [3]
+) [4]
 Overfull \hbox (1.20511pt too wide) in paragraph at lines 159--168
 []  
  []
 
-[4{d:/latex/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+[5{d:/latex/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 233.
- [5{d:/latex/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{d:/latex/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{d:/latex/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+ [6{d:/latex/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{d:/latex/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{d:/latex/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
 Overfull \hbox (39.19586pt too wide) detected at line 303
 [] []
  []
 
-[6{d:/latex/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
-<picture/a_differential_equation.png, id=442, 1672.74937pt x 462.22687pt>
+[7{d:/latex/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+<picture/a_differential_equation.png, id=457, 1672.74937pt x 462.22687pt>
 File: picture/a_differential_equation.png Graphic file (type png)
 <use picture/a_differential_equation.png>
 Package pdftex.def Info: picture/a_differential_equation.png  used on input line 339.
 (pdftex.def)             Requested size: 355.65944pt x 98.27657pt.
- [7]
-<picture/spring_damper.png, id=458, 3468.96pt x 4625.28pt>
+ [8]
+<picture/spring_damper.png, id=472, 3468.96pt x 4625.28pt>
 File: picture/spring_damper.png Graphic file (type png)
 <use picture/spring_damper.png>
 Package pdftex.def Info: picture/spring_damper.png  used on input line 350.
 (pdftex.def)             Requested size: 284.52756pt x 379.346pt.
-<picture/result.png, id=459, 433.62pt x 386.94562pt>
+<picture/result.png, id=473, 433.62pt x 386.94562pt>
 File: picture/result.png Graphic file (type png)
 <use picture/result.png>
 Package pdftex.def Info: picture/result.png  used on input line 352.
 (pdftex.def)             Requested size: 284.52756pt x 253.91472pt.
- [8 <./picture/a_differential_equation.png>] [9 <./picture/spring_damper.png>]
-<picture/step_signal.png, id=470, 1027.84pt x 678.535pt>
+ [9 <./picture/a_differential_equation.png>] [10 <./picture/spring_damper.png>]
+<picture/step_signal.png, id=484, 1027.84pt x 678.535pt>
 File: picture/step_signal.png Graphic file (type png)
 <use picture/step_signal.png>
 Package pdftex.def Info: picture/step_signal.png  used on input line 372.
 (pdftex.def)             Requested size: 170.71652pt x 112.6989pt.
- [10 <./picture/result.png>]
-<picture/deta_signal.png, id=481, 955.57pt x 667.49374pt>
+ [11 <./picture/result.png>]
+<picture/deta_signal.png, id=495, 955.57pt x 667.49374pt>
 File: picture/deta_signal.png Graphic file (type png)
 <use picture/deta_signal.png>
 Package pdftex.def Info: picture/deta_signal.png  used on input line 385.
 (pdftex.def)             Requested size: 170.71652pt x 119.24739pt.
- [11 <./picture/step_signal.png> <./picture/deta_signal.png>]
-<picture/juanji_1.png, id=489, 495.35063pt x 283.81032pt>
+ [12 <./picture/step_signal.png> <./picture/deta_signal.png>]
+<picture/juanji_1.png, id=503, 495.35063pt x 283.81032pt>
 File: picture/juanji_1.png Graphic file (type png)
 <use picture/juanji_1.png>
 Package pdftex.def Info: picture/juanji_1.png  used on input line 410.
 (pdftex.def)             Requested size: 170.71652pt x 97.81071pt.
-<picture/juanji_2.png, id=490, 490.83376pt x 241.65282pt>
+<picture/juanji_2.png, id=504, 490.83376pt x 241.65282pt>
 File: picture/juanji_2.png Graphic file (type png)
 <use picture/juanji_2.png>
 Package pdftex.def Info: picture/juanji_2.png  used on input line 414.
 (pdftex.def)             Requested size: 170.71652pt x 84.04877pt.
-<picture/juanji_3.png, id=491, 510.40688pt x 214.55156pt>
+<picture/juanji_3.png, id=505, 510.40688pt x 214.55156pt>
 File: picture/juanji_3.png Graphic file (type png)
 <use picture/juanji_3.png>
 Package pdftex.def Info: picture/juanji_3.png  used on input line 418.
 (pdftex.def)             Requested size: 170.71652pt x 71.76144pt.
-<picture/juanji_5.png, id=492, 462.97969pt x 239.39438pt>
+<picture/juanji_5.png, id=506, 462.97969pt x 239.39438pt>
 File: picture/juanji_5.png Graphic file (type png)
 <use picture/juanji_5.png>
 Package pdftex.def Info: picture/juanji_5.png  used on input line 422.
 (pdftex.def)             Requested size: 170.71652pt x 88.27133pt.
-<picture/juanji_6.png, id=493, 362.10281pt x 158.09062pt>
+<picture/juanji_6.png, id=507, 362.10281pt x 158.09062pt>
 File: picture/juanji_6.png Graphic file (type png)
 <use picture/juanji_6.png>
 Package pdftex.def Info: picture/juanji_6.png  used on input line 426.
 (pdftex.def)             Requested size: 170.71652pt x 74.53416pt.
-<picture/juanji_8.png, id=494, 686.565pt x 399.74344pt>
+<picture/juanji_8.png, id=508, 686.565pt x 399.74344pt>
 File: picture/juanji_8.png Graphic file (type png)
 <use picture/juanji_8.png>
 Package pdftex.def Info: picture/juanji_8.png  used on input line 432.
 (pdftex.def)             Requested size: 161.41483pt x 93.9763pt.
-<picture/juanji_7.png, id=495, 727.96968pt x 268.75406pt>
+<picture/juanji_7.png, id=509, 727.96968pt x 268.75406pt>
 File: picture/juanji_7.png Graphic file (type png)
 <use picture/juanji_7.png>
 Package pdftex.def Info: picture/juanji_7.png  used on input line 433.
@@ -1130,36 +1130,36 @@ Underfull \hbox (badness 1057) in paragraph at lines 429--435
 \C70/rm/m/n/12/53 U \C70/rm/m/n/12/4f M \C70/rm/m/n/12/76 „ $\OML/lmm/m/it/12 ^^N[]\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 t\OT1/lmr/m/n/12 )$|\C70/rm/m/n/12/30 ^^B| \C70/rm/m/n/12/62 Š $\OML/lmm/m/it/12 A \OT1/lmr/m/n/12 = \OML/lmm/m/it/12 ^^ATf\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 i^^AT\OT1/lmr/m/n/12 )$ \C70/rm/m/n/12/5e & \C70/rm/m/n/12/51 e \C70/rm/m/n/12/5f ^^O \C70/rm/m/n/12/4e 	|\C70/rm/m/n/12/ff ^^L| \C70/rm/m/n/12/67 ^^@ \C70/rm/m/n/12/54 ^^N \C70/rm/m/n/12/5f — ^^O \C70/rm/m/n/12/56 Û|\C70/rm/m/n/12/ff ^^Z| 
  []
 
-[12 <./picture/juanji_1.png>] [13 <./picture/juanji_2.png> <./picture/juanji_3.png> <./picture/juanji_5.png>] [14 <./picture/juanji_6.png> <./picture/juanji_8.png> <./picture/juanji_7.png>] [15] [16] [17]
-<picture/oula.png, id=550, 594.72188pt x 444.15938pt>
+[13 <./picture/juanji_1.png>] [14 <./picture/juanji_2.png> <./picture/juanji_3.png> <./picture/juanji_5.png>] [15 <./picture/juanji_6.png> <./picture/juanji_8.png> <./picture/juanji_7.png>] [16] [17] [18]
+<picture/oula.png, id=564, 594.72188pt x 444.15938pt>
 File: picture/oula.png Graphic file (type png)
 <use picture/oula.png>
 Package pdftex.def Info: picture/oula.png  used on input line 555.
 (pdftex.def)             Requested size: 161.41483pt x 120.54814pt.
-<picture/shoulianyu.png, id=551, 408.52625pt x 328.72812pt>
+<picture/shoulianyu.png, id=565, 408.52625pt x 328.72812pt>
 File: picture/shoulianyu.png Graphic file (type png)
 <use picture/shoulianyu.png>
 Package pdftex.def Info: picture/shoulianyu.png  used on input line 556.
 (pdftex.def)             Requested size: 161.41483pt x 129.88379pt.
- [18] [19 <./picture/oula.png> <./picture/shoulianyu.png>] [20] [21] [22] [23] [24] [25]
+ [19] [20 <./picture/oula.png> <./picture/shoulianyu.png>] [21] [22] [23] [24] [25] [26]
 Underfull \hbox (badness 10000) in paragraph at lines 745--747
 
  []
 
-[26]
-<picture/transform formula.png, id=599, 1283.79625pt x 1712.3975pt>
+[27]
+<picture/transform formula.png, id=613, 1283.79625pt x 1712.3975pt>
 File: picture/transform formula.png Graphic file (type png)
 <use picture/transform formula.png>
 Package pdftex.def Info: picture/transform formula.png  used on input line 771.
 (pdftex.def)             Requested size: 284.52756pt x 379.49829pt.
- [27] [28 <./picture/transform formula.png>]
-<picture/control system.png, id=608, 1068.99374pt x 809.0225pt>
+ [28] [29 <./picture/transform formula.png>]
+<picture/control system.png, id=622, 1068.99374pt x 809.0225pt>
 File: picture/control system.png Graphic file (type png)
 <use picture/control system.png>
 Package pdftex.def Info: picture/control system.png  used on input line 789.
 (pdftex.def)             Requested size: 284.52756pt x 215.32814pt.
- [29]
-<picture/feedback control.png, id=614, 1086.0575pt x 504.88625pt>
+ [30]
+<picture/feedback control.png, id=628, 1086.0575pt x 504.88625pt>
 File: picture/feedback control.png Graphic file (type png)
 <use picture/feedback control.png>
 Package pdftex.def Info: picture/feedback control.png  used on input line 798.
@@ -1169,8 +1169,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 813--815
 
  []
 
-[30 <./picture/control system.png> <./picture/feedback control.png>]
-<picture/controller_pyramid.png, id=619, 752.8125pt x 467.24562pt>
+[31 <./picture/control system.png> <./picture/feedback control.png>]
+<picture/controller_pyramid.png, id=634, 752.8125pt x 467.24562pt>
 File: picture/controller_pyramid.png Graphic file (type png)
 <use picture/controller_pyramid.png>
 Package pdftex.def Info: picture/controller_pyramid.png  used on input line 833.
@@ -1180,245 +1180,272 @@ Underfull \hbox (badness 10000) in paragraph at lines 833--837
 [][]
  []
 
-[31] [32 <./picture/controller_pyramid.png>]
-<picture/sweep_1.png, id=630, 245.91875pt x 76.78688pt>
+[32] [33 <./picture/controller_pyramid.png>]
+<picture/sweep_1.png, id=644, 245.91875pt x 76.78688pt>
 File: picture/sweep_1.png Graphic file (type png)
 <use picture/sweep_1.png>
 Package pdftex.def Info: picture/sweep_1.png  used on input line 872.
 (pdftex.def)             Requested size: 341.43306pt x 106.6151pt.
-<picture/sweep_2.png, id=631, 538.01pt x 325.71687pt>
+<picture/sweep_2.png, id=645, 538.01pt x 325.71687pt>
 File: picture/sweep_2.png Graphic file (type png)
 <use picture/sweep_2.png>
 Package pdftex.def Info: picture/sweep_2.png  used on input line 873.
 (pdftex.def)             Requested size: 341.43306pt x 206.70862pt.
- [33 <./picture/sweep_1.png>]
-<picture/sweep_3.png, id=638, 417.56pt x 50.1875pt>
+ [34 <./picture/sweep_1.png>]
+<picture/sweep_3.png, id=652, 417.56pt x 50.1875pt>
 File: picture/sweep_3.png Graphic file (type png)
 <use picture/sweep_3.png>
 Package pdftex.def Info: picture/sweep_3.png  used on input line 878.
 (pdftex.def)             Requested size: 341.43306pt x 41.03989pt.
-<picture/collection.png, id=639, 845.1575pt x 353.82187pt>
+<picture/collection.png, id=653, 845.1575pt x 353.82187pt>
 File: picture/collection.png Graphic file (type png)
 <use picture/collection.png>
 Package pdftex.def Info: picture/collection.png  used on input line 882.
 (pdftex.def)             Requested size: 341.43306pt x 142.94073pt.
-<picture/data_impot.png, id=640, 783.42688pt x 486.81876pt>
+<picture/data_impot.png, id=654, 783.42688pt x 486.81876pt>
 File: picture/data_impot.png Graphic file (type png)
 <use picture/data_impot.png>
 Package pdftex.def Info: picture/data_impot.png  used on input line 886.
 (pdftex.def)             Requested size: 341.43306pt x 212.16557pt.
- [34 <./picture/sweep_2.png> <./picture/sweep_3.png> <./picture/collection.png>]
-<picture/data_impot1.png, id=650, 813.0375pt x 572.63937pt>
+ [35 <./picture/sweep_2.png> <./picture/sweep_3.png> <./picture/collection.png>]
+<picture/data_impot1.png, id=664, 813.0375pt x 572.63937pt>
 File: picture/data_impot1.png Graphic file (type png)
 <use picture/data_impot1.png>
 Package pdftex.def Info: picture/data_impot1.png  used on input line 887.
 (pdftex.def)             Requested size: 341.43306pt x 240.47194pt.
- [35 <./picture/data_impot.png> <./picture/data_impot1.png>]
-<picture/bode.png, id=657, 779.91376pt x 461.22313pt>
+ [36 <./picture/data_impot.png> <./picture/data_impot1.png>]
+<picture/bode.png, id=671, 779.91376pt x 461.22313pt>
 File: picture/bode.png Graphic file (type png)
 <use picture/bode.png>
 Package pdftex.def Info: picture/bode.png  used on input line 897.
 (pdftex.def)             Requested size: 341.43306pt x 201.9113pt.
-<picture/identify_result.png, id=658, 974.64125pt x 461.22313pt>
+<picture/identify_result.png, id=672, 974.64125pt x 461.22313pt>
 File: picture/identify_result.png Graphic file (type png)
 <use picture/identify_result.png>
 Package pdftex.def Info: picture/identify_result.png  used on input line 902.
 (pdftex.def)             Requested size: 341.43306pt x 161.57126pt.
- [36 <./picture/bode.png> <./picture/identify_result.png>]
-<picture/variable.png, id=668, 376.90813pt x 41.15375pt>
+ [37 <./picture/bode.png> <./picture/identify_result.png>]
+<picture/variable.png, id=684, 376.90813pt x 41.15375pt>
 File: picture/variable.png Graphic file (type png)
 <use picture/variable.png>
-Package pdftex.def Info: picture/variable.png  used on input line 919.
+Package pdftex.def Info: picture/variable.png  used on input line 920.
 (pdftex.def)             Requested size: 341.43306pt x 37.27979pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--921
+Underfull \hbox (badness 10000) in paragraph at lines 920--922
 
  []
 
-<picture/variable_1.png, id=669, 474.27188pt x 71.26625pt>
+<picture/variable_1.png, id=685, 474.27188pt x 71.26625pt>
 File: picture/variable_1.png Graphic file (type png)
 <use picture/variable_1.png>
-Package pdftex.def Info: picture/variable_1.png  used on input line 923.
+Package pdftex.def Info: picture/variable_1.png  used on input line 924.
 (pdftex.def)             Requested size: 341.43306pt x 51.30728pt.
-[37 <./picture/variable.png> <./picture/variable_1.png>] [38]
-<picture/matlab.png, id=689, 958.07938pt x 319.69438pt>
+[38 <./picture/variable.png> <./picture/variable_1.png>] [39]
+<picture/matlab.png, id=704, 958.07938pt x 319.69438pt>
 File: picture/matlab.png Graphic file (type png)
 <use picture/matlab.png>
-Package pdftex.def Info: picture/matlab.png  used on input line 987.
+Package pdftex.def Info: picture/matlab.png  used on input line 988.
 (pdftex.def)             Requested size: 341.43306pt x 113.92888pt.
-<picture/close_function.png, id=690, 539.01375pt x 374.90062pt>
+<picture/close_function.png, id=705, 539.01375pt x 374.90062pt>
 File: picture/close_function.png Graphic file (type png)
 <use picture/close_function.png>
-Package pdftex.def Info: picture/close_function.png  used on input line 1004.
+Package pdftex.def Info: picture/close_function.png  used on input line 1005.
 (pdftex.def)             Requested size: 341.43306pt x 237.48148pt.
-<picture/C_5.png, id=691, 528.97626pt x 272.51813pt>
+<picture/C_5.png, id=706, 528.97626pt x 272.51813pt>
 File: picture/C_5.png Graphic file (type png)
 <use picture/C_5.png>
-Package pdftex.def Info: picture/C_5.png  used on input line 1019.
+Package pdftex.def Info: picture/C_5.png  used on input line 1020.
 (pdftex.def)             Requested size: 341.43306pt x 175.89966pt.
-<picture/C_5_I_1.png, id=692, 715.17188pt x 309.155pt>
+<picture/C_5_I_1.png, id=707, 715.17188pt x 309.155pt>
 File: picture/C_5_I_1.png Graphic file (type png)
 <use picture/C_5_I_1.png>
-Package pdftex.def Info: picture/C_5_I_1.png  used on input line 1026.
+Package pdftex.def Info: picture/C_5_I_1.png  used on input line 1027.
 (pdftex.def)             Requested size: 341.43306pt x 147.59547pt.
-<picture/C_10_I_1.png, id=693, 536.50438pt x 291.0875pt>
+<picture/C_10_I_1.png, id=708, 536.50438pt x 291.0875pt>
 File: picture/C_10_I_1.png Graphic file (type png)
 <use picture/C_10_I_1.png>
-Package pdftex.def Info: picture/C_10_I_1.png  used on input line 1029.
+Package pdftex.def Info: picture/C_10_I_1.png  used on input line 1030.
 (pdftex.def)             Requested size: 341.43306pt x 185.24713pt.
- [39] [40 <./picture/matlab.png> <./picture/close_function.png>] [41 <./picture/C_5.png>] [42 <./picture/C_5_I_1.png> <./picture/C_10_I_1.png>]
-<picture/code_control_2.png, id=716, 307.64937pt x 290.58563pt>
+ [40] [41 <./picture/matlab.png>] [42 <./picture/close_function.png>] [43 <./picture/C_5.png>] [44 <./picture/C_5_I_1.png> <./picture/C_10_I_1.png>]
+<picture/code_control_2.png, id=737, 307.64937pt x 290.58563pt>
 File: picture/code_control_2.png Graphic file (type png)
 <use picture/code_control_2.png>
-Package pdftex.def Info: picture/code_control_2.png  used on input line 1038.
+Package pdftex.def Info: picture/code_control_2.png  used on input line 1039.
 (pdftex.def)             Requested size: 341.43306pt x 322.51839pt.
- [43 <./picture/code_control_2.png>]
-<picture/code_control.png, id=726, 328.72812pt x 320.69812pt>
+ [45 <./picture/code_control_2.png>]
+<picture/code_control.png, id=745, 328.72812pt x 320.69812pt>
 File: picture/code_control.png Graphic file (type png)
 <use picture/code_control.png>
-Package pdftex.def Info: picture/code_control.png  used on input line 1041.
+Package pdftex.def Info: picture/code_control.png  used on input line 1042.
 (pdftex.def)             Requested size: 341.43306pt x 333.09734pt.
-<picture/FFC.png, id=727, 368.87813pt x 199.24437pt>
+<picture/FFC.png, id=746, 368.87813pt x 199.24437pt>
 File: picture/FFC.png Graphic file (type png)
 <use picture/FFC.png>
-Package pdftex.def Info: picture/FFC.png  used on input line 1049.
+Package pdftex.def Info: picture/FFC.png  used on input line 1050.
 (pdftex.def)             Requested size: 341.43306pt x 184.41975pt.
- [44 <./picture/code_control.png>] [45 <./picture/FFC.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1081--1083
+ [46 <./picture/code_control.png>] [47 <./picture/FFC.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1083--1085
 
  []
 
-<picture/FFC_function.png, id=740, 223.33438pt x 209.28188pt>
+<picture/FFC_function.png, id=759, 223.33438pt x 209.28188pt>
 File: picture/FFC_function.png Graphic file (type png)
 <use picture/FFC_function.png>
-Package pdftex.def Info: picture/FFC_function.png  used on input line 1083.
+Package pdftex.def Info: picture/FFC_function.png  used on input line 1085.
 (pdftex.def)             Requested size: 284.52756pt x 266.64722pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1083--1084
+Underfull \hbox (badness 10000) in paragraph at lines 1085--1086
 
  []
 
-[46]
-Overfull \hbox (43.94469pt too wide) detected at line 1095
+[48]
+Overfull \hbox (43.94469pt too wide) detected at line 1097
 []
  []
 
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 1095--1095
+Overfull \hbox (30.0pt too wide) in paragraph at lines 1097--1097
 [] 
  []
 
-[47 <./picture/FFC_function.png>]
-Overfull \hbox (12.98569pt too wide) detected at line 1099
+[49 <./picture/FFC_function.png>]
+Overfull \hbox (12.98569pt too wide) detected at line 1101
 []
  []
 
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 1099--1099
+Overfull \hbox (30.0pt too wide) in paragraph at lines 1101--1101
 [] 
  []
 
-<picture/FFC_code.png, id=750, 404.00937pt x 90.3375pt>
+<picture/FFC_code.png, id=770, 404.00937pt x 90.3375pt>
 File: picture/FFC_code.png Graphic file (type png)
 <use picture/FFC_code.png>
-Package pdftex.def Info: picture/FFC_code.png  used on input line 1103.
+Package pdftex.def Info: picture/FFC_code.png  used on input line 1105.
 (pdftex.def)             Requested size: 341.43306pt x 76.34612pt.
-[48 <./picture/FFC_code.png>] [49] [50]
-Package CJKpunct Info: use punctuation spaces for family 'zhkai' with punctstyle (quanjiao) on input line 1164.
-<picture/yaw_current_compensation.png, id=768, 1148.03906pt x 650.43pt>
+[50 <./picture/FFC_code.png>] [51] [52] [53]
+Package CJKpunct Info: use punctuation spaces for family 'zhkai' with punctstyle (quanjiao) on input line 1170.
+<picture/yaw_current_compensation.png, id=791, 1148.03906pt x 650.43pt>
 File: picture/yaw_current_compensation.png Graphic file (type png)
 <use picture/yaw_current_compensation.png>
-Package pdftex.def Info: picture/yaw_current_compensation.png  used on input line 1169.
+Package pdftex.def Info: picture/yaw_current_compensation.png  used on input line 1175.
 (pdftex.def)             Requested size: 341.43306pt x 193.43336pt.
- [51]
-<picture/yaw_compensation.png, id=810, 2182.1525pt x 1301.86375pt>
+ [54 <./picture/yaw_current_compensation.png>]
+<picture/yaw_compensation.png, id=834, 2182.1525pt x 1301.86375pt>
 File: picture/yaw_compensation.png Graphic file (type png)
 <use picture/yaw_compensation.png>
-Package pdftex.def Info: picture/yaw_compensation.png  used on input line 1178.
+Package pdftex.def Info: picture/yaw_compensation.png  used on input line 1184.
 (pdftex.def)             Requested size: 341.43306pt x 203.69382pt.
- [52 <./picture/yaw_current_compensation.png>]
-<picture/linearization_yaw.png, id=816, 1744.5175pt x 1075.01625pt>
+<picture/linearization_yaw.png, id=835, 1744.5175pt x 1075.01625pt>
 File: picture/linearization_yaw.png Graphic file (type png)
 <use picture/linearization_yaw.png>
-Package pdftex.def Info: picture/linearization_yaw.png  used on input line 1182.
+Package pdftex.def Info: picture/linearization_yaw.png  used on input line 1188.
 (pdftex.def)             Requested size: 341.43306pt x 210.39008pt.
- [53 <./picture/yaw_compensation.png> <./picture/linearization_yaw.png>]
-<picture/yaw_compensation_code.png, id=821, 448.67625pt x 426.84468pt>
+ [55 <./picture/yaw_compensation.png>]
+<picture/yaw_compensation_code.png, id=841, 448.67625pt x 426.84468pt>
 File: picture/yaw_compensation_code.png Graphic file (type png)
 <use picture/yaw_compensation_code.png>
-Package pdftex.def Info: picture/yaw_compensation_code.png  used on input line 1184.
+Package pdftex.def Info: picture/yaw_compensation_code.png  used on input line 1190.
 (pdftex.def)             Requested size: 341.43306pt x 324.82869pt.
- [54 <./picture/yaw_compensation_code.png>]
-<picture/tracking_differentiator.png, id=828, 1083.04625pt x 386.94562pt>
-File: picture/tracking_differentiator.png Graphic file (type png)
-<use picture/tracking_differentiator.png>
-Package pdftex.def Info: picture/tracking_differentiator.png  used on input line 1215.
-(pdftex.def)             Requested size: 341.43306pt x 121.98297pt.
- [55 <./picture/tracking_differentiator.png>]
-<picture/tracking_differentiator_pid.png, id=835, 1045.40562pt x 390.45876pt>
-File: picture/tracking_differentiator_pid.png Graphic file (type png)
-<use picture/tracking_differentiator_pid.png>
-Package pdftex.def Info: picture/tracking_differentiator_pid.png  used on input line 1221.
-(pdftex.def)             Requested size: 341.43306pt x 127.52316pt.
- [56 <./picture/tracking_differentiator_pid.png>] [57]
-<picture/tracking_differentiator_ss.png, id=847, 776.9025pt x 329.73187pt>
-File: picture/tracking_differentiator_ss.png Graphic file (type png)
-<use picture/tracking_differentiator_ss.png>
-Package pdftex.def Info: picture/tracking_differentiator_ss.png  used on input line 1253.
-(pdftex.def)             Requested size: 341.43306pt x 144.91139pt.
-<picture/tracking_differentiator_ss_all.png, id=848, 1037.37563pt x 385.44pt>
-File: picture/tracking_differentiator_ss_all.png Graphic file (type png)
-<use picture/tracking_differentiator_ss_all.png>
-Package pdftex.def Info: picture/tracking_differentiator_ss_all.png  used on input line 1255.
-(pdftex.def)             Requested size: 341.43306pt x 126.86035pt.
- [58 <./picture/tracking_differentiator_ss.png> <./picture/tracking_differentiator_ss_all.png>]
-<picture/tracking_differentiator_scope.png, id=855, 565.11125pt x 445.665pt>
-File: picture/tracking_differentiator_scope.png Graphic file (type png)
-<use picture/tracking_differentiator_scope.png>
-Package pdftex.def Info: picture/tracking_differentiator_scope.png  used on input line 1268.
-(pdftex.def)             Requested size: 341.43306pt x 269.27113pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1268--1271
+Underfull \hbox (badness 10000) in paragraph at lines 1197--1200
 
  []
 
-[59 <./picture/tracking_differentiator_scope.png>]
-<picture/tracking_differentiator_code.png, id=862, 584.1825pt x 126.4725pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1209--1211
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1212--1214
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1217--1219
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1220--1222
+
+ []
+
+[56 <./picture/linearization_yaw.png> <./picture/yaw_compensation_code.png>] [57] [58] [59]
+<picture/tracking_differentiator.png, id=871, 1083.04625pt x 386.94562pt>
+File: picture/tracking_differentiator.png Graphic file (type png)
+<use picture/tracking_differentiator.png>
+Package pdftex.def Info: picture/tracking_differentiator.png  used on input line 1258.
+(pdftex.def)             Requested size: 341.43306pt x 121.98297pt.
+<picture/tracking_differentiator_pid.png, id=872, 1045.40562pt x 390.45876pt>
+File: picture/tracking_differentiator_pid.png Graphic file (type png)
+<use picture/tracking_differentiator_pid.png>
+Package pdftex.def Info: picture/tracking_differentiator_pid.png  used on input line 1264.
+(pdftex.def)             Requested size: 341.43306pt x 127.52316pt.
+ [60 <./picture/tracking_differentiator.png> <./picture/tracking_differentiator_pid.png>] [61]
+<picture/tracking_differentiator_ss.png, id=886, 776.9025pt x 329.73187pt>
+File: picture/tracking_differentiator_ss.png Graphic file (type png)
+<use picture/tracking_differentiator_ss.png>
+Package pdftex.def Info: picture/tracking_differentiator_ss.png  used on input line 1296.
+(pdftex.def)             Requested size: 341.43306pt x 144.91139pt.
+ [62]
+<picture/tracking_differentiator_ss_all.png, id=891, 1037.37563pt x 385.44pt>
+File: picture/tracking_differentiator_ss_all.png Graphic file (type png)
+<use picture/tracking_differentiator_ss_all.png>
+Package pdftex.def Info: picture/tracking_differentiator_ss_all.png  used on input line 1298.
+(pdftex.def)             Requested size: 341.43306pt x 126.86035pt.
+<picture/tracking_differentiator_scope.png, id=892, 565.11125pt x 445.665pt>
+File: picture/tracking_differentiator_scope.png Graphic file (type png)
+<use picture/tracking_differentiator_scope.png>
+Package pdftex.def Info: picture/tracking_differentiator_scope.png  used on input line 1311.
+(pdftex.def)             Requested size: 341.43306pt x 269.27113pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1311--1314
+
+ []
+
+[63 <./picture/tracking_differentiator_ss.png> <./picture/tracking_differentiator_ss_all.png>] [64 <./picture/tracking_differentiator_scope.png>]
+<picture/tracking_differentiator_code.png, id=905, 584.1825pt x 126.4725pt>
 File: picture/tracking_differentiator_code.png Graphic file (type png)
 <use picture/tracking_differentiator_code.png>
-Package pdftex.def Info: picture/tracking_differentiator_code.png  used on input line 1286.
+Package pdftex.def Info: picture/tracking_differentiator_code.png  used on input line 1329.
 (pdftex.def)             Requested size: 341.43306pt x 73.92145pt.
-<picture/tracking_differentiator_code_expng.png, id=863, 370.38374pt x 257.96375pt>
+<picture/tracking_differentiator_code_expng.png, id=906, 370.38374pt x 257.96375pt>
 File: picture/tracking_differentiator_code_expng.png Graphic file (type png)
 <use picture/tracking_differentiator_code_expng.png>
-Package pdftex.def Info: picture/tracking_differentiator_code_expng.png  used on input line 1288.
+Package pdftex.def Info: picture/tracking_differentiator_code_expng.png  used on input line 1331.
 (pdftex.def)             Requested size: 341.43306pt x 237.80185pt.
- [60 <./picture/tracking_differentiator_code.png>]
+ [65 <./picture/tracking_differentiator_code.png>] [66 <./picture/tracking_differentiator_code_expng.png>]
 
 Package caption Warning: Unused \captionsetup[sub] on input line 26.
 See the caption package documentation for explanation.
 
-[61 <./picture/tracking_differentiator_code_expng.png>] (./Awakenlion controller.aux)
+[67] (./Awakenlion controller.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/07/14>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `"Awakenlion controller".out' has not changed.
-(rerunfilecheck)             Checksum: 9D986A6889C155DBE53777F77E68E906;4168.
+(rerunfilecheck)             Checksum: 2EC4E34E3B6A723E2CE2479C2884B1A1;4414.
  ) 
 Here is how much of TeX's memory you used:
- 41327 strings out of 476023
- 884631 string characters out of 5791128
- 1959190 words of memory out of 5000000
- 62181 multiletter control sequences out of 15000+600000
- 712350 words of font info for 409 fonts, out of 8000000 for 9000
+ 41451 strings out of 476023
+ 886761 string characters out of 5791128
+ 1963190 words of memory out of 5000000
+ 62273 multiletter control sequences out of 15000+600000
+ 715860 words of font info for 422 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  110i,22n,107p,866b,1403s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmex10.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr17.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr6.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri12.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "Awakenlion controller.pdf" (61 pages, 22835469 bytes).
+<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmex10.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr17.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr6.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri12.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><d:/latex/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on "Awakenlion controller.pdf" (67 pages, 22886274 bytes).
 PDF statistics:
- 1502 PDF objects out of 1728 (max. 8388607)
- 1030 compressed objects within 11 object streams
- 104 named destinations out of 1000 (max. 500000)
- 1034 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1584 PDF objects out of 1728 (max. 8388607)
+ 1095 compressed objects within 11 object streams
+ 112 named destinations out of 1000 (max. 500000)
+ 1050 words of extra memory for PDF output out of 10000 (max. 10000000)
 
