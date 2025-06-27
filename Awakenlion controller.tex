@@ -848,7 +848,7 @@
     \begin{flushleft}
       （其中J是云台转动惯量，b是阻尼系数，这二者可认为是常数，而T是我们控制输入的力矩，具体的推导过程就留给大家尝试，需要一定的大物知识）
     但是由于我们云台电机磨损情况不知、难以准确的得到转动惯量和阻尼系数,所以我们要借助Matlab的system identification工具进行系统识别。\\
-   \subsubsection{实现步骤}
+   \subsubsection{速度环闭环识别}
       \begin{flushleft}
         \textbf{第①步：扫频}\\
         \ 首先我们需要扫频，扫频就是说我们系统输入的信号需要从1-40Hz增加，从而得到每个频率对应的响应。
@@ -903,7 +903,7 @@
       \end{flushleft}
       至此，我们的系统就识别出来了
     \end{flushleft}
-    
+    \subsubsection{系统开环识别}
 
     \href{https://bbs.robomaster.com/wiki/4574/3559}{RM官方开源教程-系统辨识基础教程}
     \\\href{ https://blog.csdn.net/xiaohejiaoyiya/article/details/105958551?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522d515a96088d8f99093ec8d0b4cb80d62%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=d515a96088d8f99093ec8d0b4cb80d62&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-1-105958551-null-null.142^v100^pc_search_result_base1&utm_term=%E5%88%A9%E7%94%A8system%20identification%E7%A1%AE%E8%AE%A4%E6%A8%A1%E5%9E%8B&spm=1018.2226.3001.4187}{【Matlab】利用System identification App辨识对象模型}。\\
@@ -1021,7 +1021,7 @@
         观察伯德图我们可以看到$C(s)=5$，将系统的伯德图整体拉高了，使得稳态误差减少了。\\
         但是我们看到他的抗噪声能力下降了，对比原系统的伯德图，假如输入信号都有一个100Hz的噪声,原系统可以抑制到-20多dB,但是加了只有比例项的PID后只能抑制到-10dB。这个和$C(s)=5$的伯德图本身就有关系（关于伯德图的叠加关系记得看上面dr.can的视频）。所以一旦有这个频段的噪音，系统就会剧烈抖动。\\{\scriptsize 为什么不用考虑低频的噪声，因为噪声普遍是高频的}
       \end{flushleft}
-      \vspace{2cm}
+      \vspace{1cm}
       \begin{flushleft}
         所以在比例项的基础上我们会引入积分项，让$K_p=5$，$K_i=1$、$K_d=0$，可得到伯德图如下
         \par \includegraphics[width=12cm]{picture/C_5_I_1.png}
@@ -1225,13 +1225,61 @@
         \textit{讲到这里我小小的提一嘴，其实前馈的三种形式我们已经全部学完了，并且能很好的融入到我们的代码之中，还有不理解的可以再次参考一下我上面推荐的前馈控制的三种形式的视频再回头看看文档，希望大家有更深刻的理解。}          
         \end{notitlebox}
         \subsection{重力补偿}
-      
-      
-        \subsection{低通滤波器}
-      
-      
-      
-        \subsection{跟踪微分器}
+      \begin{flushleft}
+         \href{https://www.bilibili.com/video/BV1wX7BzVEf6/?spm_id_from=333.1391.0.0&vd_source=b02f21f21dd17ebeef8dac9338c9d06c}{云台参数识别与调试}
+      \end{flushleft}
+     
+        \subsection{滤波器}
+        \subsubsection{\textit{引言}}
+        \begin{flushleft}
+          \textit{在我们控制器的设计中，我们会遇到一个问题，就是我们的输入信号是有噪声的，这个噪声会导致我们的控制器输出不稳定，甚至会导致系统失稳。
+          所以我们需要对输入信号进行滤波处理，滤波器可以有效的滤除噪声信号，从而提高系统的稳定性。\\
+          而在这里我会跟大家讲一下滤波器的基础知识，教大家如何利用MATLAB生成我们所需要的滤波器。至于说如何设计滤波器，这个我就不讲了（其实目前我也没学），因为滤波器的设计是一个非常复杂的过程，需要根据具体的系统来进行设计，这里我只给大家介绍一下滤波器的种类和作用，以及如何用MATLAB生成我们想要的滤波器。想要知道是怎么设计的同学可以去学习《数字信号处理》这本书。}
+          
+        \end{flushleft}
+      \subsubsection{理论知识}
+      \begin{flushleft}
+        滤波器的作用是滤除噪声信号，滤波器的种类有很多种，常见的有低通滤波器、高通滤波器、带通滤波器、陷波滤波器等。\\
+        这里我们只需要用到低通滤波器就可以了，低通滤波器可以有效的滤除高频噪声信号。\\
+        我们先从最简单的一阶低通滤波器开始学习，其传递函数为：
+        \begin{align*}
+          G(s)=\dfrac{\omega _{c}}{s+\omega _{c}}
+        \end{align*}
+        其中$\omega _{c}$为截止频率，截止频率越大，滤波效果越差。（这里大家就自己去用MATLAB生成一下伯德图研究一下不一样的截止频率所对应的图像吧，我就不过多描述了）
+      \end{flushleft}
+
+      \begin{flushleft}
+       然而在很多情况下，一阶滤波器并不能满足我们的滤波要求，比如一阶滤波器衰减不够快、衰减幅度不够等，所以我们需要更高阶的滤波器。
+        \end{flushleft}
+
+       \begin{flushleft}
+        我们可以用MATLAB来生成一个低通滤波器。跟着下面的教程你就可以生成你想要的滤波器。\\
+        我们先说说要怎么选择的滤波器，这里介绍一下几种滤波器的区别和适用情况。\\
+        \par \includegraphics[width=12cm]{picture/digital_filter.png}\\
+        巴特沃斯滤波器：具有平坦的幅频响应，适用于对幅度响应要求较高的场合，但相位响应较差。\\
+        切比雪夫I型滤波器：具有较陡的幅频响应，但会引入波纹，适用于对幅度响应要求较高且可以接受波纹的场合。\\
+        切比雪夫II型滤波器：具有较陡的幅频响应，但相位响应较差，适用于对幅度响应要求较高且可以接受相位失真的场合。\\
+        同样的过渡带陡峭度从大到小依次为：切比雪夫I型、切比雪夫II型、巴特沃斯。也就是说如果需要相同过渡带陡峭度的话，巴特沃斯滤波器就会比切比雪夫滤波器的阶数更高，所需要的计算资源也会爆炸性增长\\
+        \par \includegraphics[width=12cm]{picture/filter_4.png}\\
+        剩下的各种滤波器大家都可以在网上查到，这里就不一一介绍了。道理都是互通的\\
+          \href{https://bbs.robomaster.com/wiki/4574/4064?source=7}{RM入门教学系列数字滤波器设计与实现}\\
+        \end{flushleft}
+        通过MATLAB得出来了一堆系数，那这堆系数要怎么用呢？在工程上我们对滤波器的计算方法会有两种：一种是直接型，一种是级联型。\\
+        直接型：直接将传递函数进行差分计算\\
+        级联型：将传递函数化为多个分子分母为都为一阶或二阶的传递函数累乘，然后再差分计算\\
+        而那堆系数就是我们级联型所需要的系数，在传递函数中其实级联型和直接型是没有区别的，而误差累积的根源是从无限精度的传递函数到有限精度实现的映射过程​。\\
+        如果是直接型，每个时间步的误差会被反馈系数 ​反复放大并重新注入系统，形成闭环，误差会被反馈系数反复放大（指数爆炸）。而级联型的每个节（Biquad）的误差仅影响下一节的输入，但不会通过反馈环路重新注入自身。第m节的误差△$ y_{m}$会传递到第m+1节，但不会反向影响第m节自身​\\
+       \textbf{两者的实现代码如下：}\\
+        直接型：\\
+        \par \includegraphics[width=12cm]{picture/chebyshev_direct.png}\\
+
+        级联型：\\\par \includegraphics[width=12cm]{picture/chebyshev_step1.png}
+        \\ \par \includegraphics[width=12cm]{picture/chebyshev_step.png}\\ 
+        我对级联型的二阶部分进行数学推导，其余的一阶和直接型的差分方程都是如下的推导，大家可以自行推导。\\
+        \par \includegraphics[width=12cm]{picture/SOS_derivation.png}
+        \\怕大家不理解中间的辅助函数是什么，大家可以去看看这个视频，中间的双线变换（其实还有前向和后向欧拉变换等方法）大家可以自行了解，只是域的转换而已\href{https://www.bilibili.com/video/BV1PZ4y1t7DA?spm_id_from=333.788.videopod.episodes&vd_source=b02f21f21dd17ebeef8dac9338c9d06c&p=36}{微分方程模拟框图}
+       
+       \subsection{跟踪微分器}
         \begin{flushleft}
           为什么我会讲解这个控制器呢？因为在我之前使用键鼠调车的时候发现我鼠标输入的值变成了阶跃信号，而非一条平滑的曲线，这导致了我的云台一卡一卡的。后面有师兄帮我加了这个控制器之后曲线就变得平滑了。
           \\为了防止大家后面也遇到这种情况，这里给大家讲解它的用法，除了平滑曲线之外它还可以抑制超调现象，在一定情况下可以使用。
